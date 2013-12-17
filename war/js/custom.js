@@ -68,7 +68,7 @@ $(document).ready(function() {
  		}
  		
  		// build data from input fields
- 		var jsdata = {mail: $('#e-mail').val()};
+ 		var jsdata = {type: "signup", mail: $('#e-mail').val()};
  		var jsonStr = JSON.stringify(jsdata);
  		 		
  		$.ajax({
@@ -79,7 +79,7 @@ $(document).ready(function() {
 			timeout : 15000,
 			success : function(data, textStatus) {
 				if(textStatus == 'OK') {
-					result = '<div class="alert alert-success">Thanks, we\'ll be in touch!"</div>';
+					result = '<div class="alert alert-success">Thanks for signing up!"</div>';
 					setTimeout("location.reload(true);",7000);
 			  	} else {
 					result = msg;
@@ -95,7 +95,8 @@ $(document).ready(function() {
 	/* ========== CONTACT FORM ========== */
 
     $("#contact-form").submit(function() {
-    	var jsdata = {name: $('#name').val(), 
+    	var jsdata = {type: "signup",
+    			name: $('#name').val(), 
     			email: $('#email').val(),
     			message: $('#message').val()};
     	var jsonStr = JSON.stringify(jsdata);
@@ -115,7 +116,7 @@ $(document).ready(function() {
 			timeout : 15000,
 			success : function(data, textStatus) {
 				if(textStatus == 'OK') {
-					result = '<div class="alert alert-success">Thanks, we\'ll be in touch!"</div>';
+					result = '<div class="alert alert-success">Thanks for your question!"</div>';
 					setTimeout("location.reload(true);",7000);
 			  	} else {
 					result = msg;
