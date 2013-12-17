@@ -103,7 +103,7 @@ $(document).ready(function() {
 	
  		if($('#name').val() == '' || $('#email').val() == '' || $('#message').val() == '')
  		{
- 			$('#error-info').html('Please fill in all the fields!');
+ 			$('#contact-error').html('Please fill in all the fields!');
  			return false;
  		}
  		
@@ -116,9 +116,9 @@ $(document).ready(function() {
 			timeout : 15000,
 			success : function(data, textStatus) {
 				if(textStatus == 'success') {
-					$('#error-info').html("Thanks for submitting your questions, we'll be in touch!");
+					$('#contact-error').html("Thanks for submitting your questions, we'll be in touch!");
 			  	} else {
-			  		$('#error-info').html("Something went wrong :( Please, try again!");
+			  		$('#contact-error').html("Something went wrong :( Please, try again!");
 			  	}
 				setTimeout("location.reload(true);",4000);
 			},
