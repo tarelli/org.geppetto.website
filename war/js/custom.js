@@ -78,12 +78,12 @@ $(document).ready(function() {
 			url : '/sendemail',
 			timeout : 15000,
 			success : function(data, textStatus) {
-				if(textStatus == 'OK') {
-					result = '<div class="alert alert-success">Thanks for signing up!"</div>';
-					setTimeout("location.reload(true);",7000);
+				if(textStatus == 'success') {
+					$('#error-info').html("Thanks for signing up!");
 			  	} else {
-					result = msg;
+			  		$('#error-info').html("Something went wrong :( Please, try again!");
 			  	}
+				setTimeout("location.reload(true);",4000);
 			},
 			error : function(xhr, textStatus, errorThrown) {
 				$('#error-info').html(errorThrown);
@@ -115,12 +115,12 @@ $(document).ready(function() {
 			url : '/sendemail',
 			timeout : 15000,
 			success : function(data, textStatus) {
-				if(textStatus == 'OK') {
-					result = '<div class="alert alert-success">Thanks for your question!"</div>';
-					setTimeout("location.reload(true);",7000);
+				if(textStatus == 'success') {
+					$('#error-info').html("Thanks for submitting your questions, we'll be in touch!");
 			  	} else {
-					result = msg;
+			  		$('#error-info').html("Something went wrong :( Please, try again!");
 			  	}
+				setTimeout("location.reload(true);",4000);
 			},
 			error : function(xhr, textStatus, errorThrown) {
 				$('#contact-error').html(errorThrown);

@@ -53,22 +53,25 @@ public class SendEmailServlet extends HttpServlet {
 						"bad request - need data in the request");
 			}
 
-			sendEmail(new InternetAddress("matteo@geppetto.org"),
+			sendEmail(new InternetAddress("matteo@geppetto.org", "Geppetto"),
 					new InternetAddress("info@geppetto.org"),
 					"Someone is interested in Geppetto", MAIL_TO_US
 							+ "<p style=\"font-family:helvetica;\">" + postData
 							+ "</p>");
 			if (type.equals("signup")) {
-				sendEmail(new InternetAddress("matteo@geppetto.org"),
+				sendEmail(
+						new InternetAddress("matteo@geppetto.org", "Geppetto"),
 						new InternetAddress(userMail),
 						"Thanks for your interest in Geppetto!", MAIL_TO_USER);
 			}
 
-			resp.getWriter().println("OK");
+			JSONObject response=new JSONObject("{'status':'ok'}");
+			resp.getWriter().println(response);
 
 		} catch (Exception e) {
-			// TODO: do some logging
 			resp.getWriter().println("{\"error\":\"" + e.getMessage() + "\"}");
+		} finally {
+			resp.getWriter().close();
 		}
 	}
 
