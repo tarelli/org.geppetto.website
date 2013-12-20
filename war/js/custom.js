@@ -84,8 +84,8 @@ $(document).ready(function() {
 					$('#error-info').html("Thanks for signing up!");
 			  	} else {
 			  		$('#error-info').html("Something went wrong :( Please, try again!");
+			  		setTimeout("location.reload(true);",4000);
 			  	}
-				setTimeout("location.reload(true);",4000);
 			},
 			error : function(xhr, textStatus, errorThrown) {
 				$('#error-info').html(errorThrown);
@@ -100,7 +100,7 @@ $(document).ready(function() {
     $("#contact-form").submit(function() {
     	var jsdata = {type: "signup",
     			name: $('#name').val(), 
-    			email: $('#email').val(),
+    			mail: $('#email').val(),
     			message: $('#message').val()};
     	var jsonStr = JSON.stringify(jsdata);
 	
@@ -123,8 +123,8 @@ $(document).ready(function() {
 					$('#contact-error').html("Thanks for submitting your questions, we'll be in touch!");
 			  	} else {
 			  		$('#contact-error').html("Something went wrong :( Please, try again!");
+			  		setTimeout("location.reload(true);",4000);
 			  	}
-				setTimeout("location.reload(true);",4000);
 			},
 			error : function(xhr, textStatus, errorThrown) {
 				$('#contact-error').html(errorThrown);

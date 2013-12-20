@@ -5822,6 +5822,17 @@ input {
 #footer .bottom-menu-inverse ul.bottom-icons li a:hover {
   color: #ff7d00;
 }
+
+#error-info{
+	color:white;
+	text-align:right;
+}
+
+#contact-error{
+	color:#ff7d00;
+	text-align:right;
+}
+
 /* ========== BUTTONS ========== */
 .btn,
 .btn-group > .btn,
