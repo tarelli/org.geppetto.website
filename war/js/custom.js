@@ -70,7 +70,9 @@ $(document).ready(function() {
  		// build data from input fields
  		var jsdata = {type: "signup", mail: $('#e-mail').val()};
  		var jsonStr = JSON.stringify(jsdata);
- 		 		
+
+ 		$("#signupbtn").attr('disabled','disabled'); 		
+ 		$('#error-info').html("Sending...");
  		$.ajax({
 			type : 'POST',
 			dataType : 'json',
@@ -87,6 +89,7 @@ $(document).ready(function() {
 			},
 			error : function(xhr, textStatus, errorThrown) {
 				$('#error-info').html(errorThrown);
+				$("#signupbtn").removeAttr('disabled');
 			}
 		});
  		return false;
@@ -107,7 +110,8 @@ $(document).ready(function() {
  			return false;
  		}
  		
- 		 		
+ 		$("#contactbtn").attr('disabled','disabled'); 		
+ 		$('#contact-error').html("Sending...");
  		$.ajax({
 			type : 'POST',
 			dataType : 'json',
@@ -124,6 +128,7 @@ $(document).ready(function() {
 			},
 			error : function(xhr, textStatus, errorThrown) {
 				$('#contact-error').html(errorThrown);
+				$("#contactbtn").removeAttr('disabled');
 			}
 		});
  		
