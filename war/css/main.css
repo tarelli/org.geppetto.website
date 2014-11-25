@@ -2844,6 +2844,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
   width: 100%;
   font-size: 0;
 }
+
+ul {
+  font-size: 18px;
+  line-height: 1.4642745000000001;
+  font-weight: 300;
+}
 .pager {
   background-color: #34495e;
   border-radius: 6px;
