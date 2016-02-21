@@ -5464,7 +5464,7 @@ input {
   height: 672px;
   width: 100%;
   position: fixed;
-  background: url('../images/bckg.png') center center no-repeat;
+  background: url('../images/bckg2.png') center center no-repeat;
   background-size: cover;
   z-index: -100;
 }
@@ -5505,7 +5505,32 @@ input {
 	font-size: 250px;
 }
 
+
 /* ========== FEATURES SECTION ========== */
+#news {
+  background-color: white;
+  padding-bottom: 48px;
+}
+.parss-title a:hover {
+  text-decoration: none;
+}
+
+.parss-date {
+
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.parss-title, .parss-date, .parss-description {
+  display: block;
+  clear: both;
+  text-align: left;
+}
+
+.parss-image {
+  display: none;
+}
+
 #features {
   background-color: white;
   padding-bottom: 48px;
@@ -5526,6 +5551,12 @@ input {
   -o-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+#twitterButton{
+  margin: 0 auto;
+  margin-top:50px;
+  width: 180px;
 }
 /* ========== NEWSLETTER SECTION ========== */
 #newsletter {
@@ -5761,8 +5792,8 @@ input {
   margin-bottom: 24px;
 }
 #faq .contact-intro img {
-  height: 120px;
-  width: 120px;
+  display: block;
+  margin:0 auto;
 }
 #faq .contact-intro .lead {
   padding-top: 24px;

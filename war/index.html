@@ -14,9 +14,10 @@
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="font/uicon/uicon.css">
 		<link rel="stylesheet" href="font/flaticon/flaticon.css">
-		<link rel="stylesheet" href="css/main.css" >
+        <link rel="stylesheet" href="css/animate.css" >
+        <link rel="stylesheet" href="css/main.css" >
 		
-		<title>geppetto</title>
+		<title>Geppetto</title>
 		
 	</head>
 	<link rel="icon" type="image/png" href="images/favicon.png">
@@ -54,6 +55,7 @@
 
                             <!-- Menu items go here -->
                             <li class="active hidden"><a href="#home">Home</a></li>
+                            <li><a href="#news">News</a></li>
                             <li><a href="#features">Highlights</a></li>
                             <li><a href="#info">Features</a></li>
                             <li><a href="#gallery">Gallery</a></li>
@@ -91,10 +93,10 @@
 
                 <div class="col-md-8 intro">
                     <div id="glogo"></div>
-                    <p class="lead">Simulate the future.</p>
+                    <p class="lead tagline">Simulate the future</p>
                     <a href="http://live.geppetto.org" target="_blank" class="btn btn-hg btn-primary">Live demo <i class="fa fa-cogs"></i></a>
-                    <a href="https://github.com/openworm/org.geppetto/releases" target="_blank" class="btn btn-hg btn-inverse inline"">Download <i class="fa fa-download"></i></a>
-                    <a href="http://docs.geppetto.org/en/latest/" target="_blank" class="btn btn-hg btn-inverse inline">Wiki <i class="fa fa-file-text"></i></a>
+                    <a href="https://github.com/openworm/org.geppetto/releases" target="_blank" class="btn btn-hg btn-inverse inline">Download <i class="fa fa-download"></i></a>
+                    <a href="http://docs.geppetto.org/en/latest/" target="_blank" class="btn btn-hg btn-inverse inline">Docs <i class="fa fa-file-text"></i></a>
                 </div>
 
             </div><!-- /row -->
@@ -106,7 +108,25 @@
 
 
 
-    <!--/////////////////////////////////////// FEATURES SECTION ////////////////////////////////////////-->
+    <!--/////////////////////////////////////// NEWS SECTION ////////////////////////////////////////-->
+
+    <section id="news">
+        <div class="container">
+
+            <header>
+                <h1>News</h1>
+            </header>
+            <div class="row">
+                <ul id="news-feed">
+
+                </ul>
+            </div>
+        </div>
+        <div id="twitterButton">
+            <a href="https://twitter.com/geppettoengine" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @geppettoengine</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+    </section>
 
     <section id="features">
 
@@ -114,7 +134,7 @@
 
             <header>
                 <h1>Skip to the science.</h1>
-                <p class="lead">The simulation platform focused on what matters to you.</p>
+                <p class="lead">The visualization and simulation platform focused on what matters to you.</p>
             </header>
 
             <div class="row">
@@ -125,8 +145,8 @@
                         <icon class="itransparent i6x ficon-robot3"></icon>
                     </div>
                     <h4>Computational biology reimagined.</h4>
-                    <p>Geppetto is a web-based multi-algorithm, multi-scale simulation platform engineered to support 
-                    the simulation of complex biological systems and their surrounding environment.</p>
+                    <p>Geppetto is a web-based visualization and simulation platform engineered to
+                        explore complex biological systems. </p>
                 </div>
 
                 <!-- Feature Item 2 -->
@@ -135,9 +155,9 @@
                         <icon class="itransparent i6x ficon-chemical"></icon>
                     </div>
                     <h4>A completely modular platform.</h4>
-                    <p>Engineered together with scientists, Geppetto lets you integrate different simulators and models. 
-                    Independent modules allow the user to read different standard modeling formats and to simulate different
-                    aspects of reality.</p>
+                    <p>Engineered together with scientists, Geppetto lets you integrate different data and models.
+                    A modular architecture allows the platform to easily support different standard formats
+                    for both experimental and computational data.</p>
                 </div>
 
                 <!-- Feature Item 3 -->
@@ -146,8 +166,8 @@
                        <icon class="itransparent i6x ficon-leaf1"></icon>
                     </div>
                     <h4>An open-source revolution.</h4>
-                    <p>Geppetto is entirely open source and engineers, scientists and developers are welcome to contribute 
-                    to its development by adding functionality to existing modules or by creating new ones!</p>
+                    <p>Geppetto is entirely open source and engineers, scientists and developers from different groups are contributing
+                    to its development by adding functionality to visualize or simulate new data.</p>
                 </div>
 
             </div><!-- /row -->
@@ -186,9 +206,10 @@
                                     <a href="images/f0.png"><img src="images/f0.png" alt="placeholder image" class="img-responsive"></a>
                                     <div class="carousel-caption">
                                         <h4>Awesome in-browser 3D</h4>
-                                        <p>Geppetto provides a standard way to stream 3D models that reflect the 
-                                        current status of your simulation and visualize them in stunning 3D in 
-                                        your web browser.</p>
+                                        <p>Geppetto enables visualizing and interacting with 3D data in your web browser.
+                                            Take advantage of out of the box support for point clouds, ball-and-stick models, line segments
+                                            for large networks or arbitrarly complex meshes.
+                                        </p>
                                     </div>
                                 </div>
                                 
@@ -196,17 +217,25 @@
                                 <div class="item gallery-popup">
                                     <a href="images/f1.png"><img src="images/f1.png" alt="placeholder image" class="img-responsive"></a>
                                     <div class="carousel-caption">
-                                        <h4>GPU support</h4>
-                                        <p>Geppetto supports OpenCL through 
-                                        <a href="https://github.com/ochafik/nativelibs4java/tree/master/libraries" target="_blank">JavaCL</a>, 
-                                        allowing the mathematical solvers to use parallelism and give an extra performance boost on 
-                                        standard computing sytems.</p>
+                                        <h4>Extensible widgets based framework</h4>
+                                        <p>A modular system of widgets allows both experimental and simulated data to be visualized
+                                        in domain specific ways so that you can always be in control of how to present your data.</p>
+                                    </div>
+                                </div>
+
+                                <div class="item gallery-popup">
+                                    <a href="images/f2.png"><img src="images/f2.png" alt="placeholder image" class="img-responsive"></a>
+                                    <div class="carousel-caption">
+                                        <h4>Fully indexed and searchable data and models</h4>
+                                        <p>The data and models loaded inside Geppetto are fully indexed and searchable
+                                            for you to always find what is most important without big data getting in the way.
+                                        </p>
                                     </div>
                                 </div>
                                 
                                 
                                 <div class="item gallery-popup">
-                                    <a href="images/f2.png"><img src="images/f2.png" alt="placeholder image" class="img-responsive"></a>
+                                    <a href="images/f3.png"><img src="images/f3.png" alt="placeholder image" class="img-responsive"></a>
                                     <div class="carousel-caption">
                                         <h4>Pixel-perfect interface</h4>
                                         <p>Geppetto offers a gorgeous minimal and flat interface built using only vector images. 
@@ -218,18 +247,18 @@
 
 
                                 <div class="item gallery-popup">
-                                    <a href="images/f3.png"><img src="images/f3.png" alt="placeholder image" class="img-responsive"></a>
+                                    <a href="images/f4.png"><img src="images/f4.png" alt="placeholder image" class="img-responsive"></a>
                                     <div class="carousel-caption">
-                                        <h4>Real-time interactions</h4>
-                                        <p>We know you are used to waiting for the simulation to be over before looking at your result. 
-                                        And we also know you are not used to interact with your simulation while it is running. 
-                                        <strong>Welcome to the future.</strong></p>
+                                        <h4>Dynamic visualization</h4>
+                                        <p>We know you are used to look at your simulations only via a plot or a static rendered video.
+                                            In Geppetto the 3D models can be linked to your simulation to add a dynamic visual component to your
+                                            computational experiments.</p>
                                     </div>
                                 </div>
                                 
                                 
                                 <div class="item gallery-popup">
-                                    <a href="images/f4.png"><img src="images/f4.png" alt="placeholder image" class="img-responsive"></a>
+                                    <a href="images/f5.png"><img src="images/f5.png" alt="placeholder image" class="img-responsive"></a>
                                     <div class="carousel-caption">
                                         <h4>Web-based console</h4>
                                         <p>Who would want to do a computational experiment using a GUI that doesn't let you script your 
@@ -239,11 +268,12 @@
                                 
                                 
                                 <div class="item gallery-popup">
-                                    <a href="images/f5.png"><img src="images/f5.png" alt="placeholder image" class="img-responsive"></a>
+                                    <a href="images/f6.png"><img src="images/f6.png" alt="placeholder image" class="img-responsive"></a>
                                     <div class="carousel-caption">
-                                        <h4>Standards-based</h4>
-                                        <p>In geppetto's architecture, every simulator is paired with a model interpreter that allows
-                                         reading a declarative model written using a standard modeling language.</p>
+                                        <h4>A powerful abstraction</h4>
+                                        <p>Geppetto defines a model abstraction capable of representing different classes of models and data,
+                                            in a generic way. In this way the platform can be used over and over by different groups, becoming
+                                        more and more robust, generic and smart.</p>
                                     </div>
                                 </div>
                             </div>
@@ -358,42 +388,10 @@
 				<div class="col-lg-3 col-md-4 col-xs-6 gallery-item all neuroscience">
                     <a href="images/cn7.png"><img src="images/cn7.png" alt="gallery-image" class="img-responsive" /></a>
                 </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all sph">
-                    <a href="images/sph0.png"><img src="images/sph0.png" alt="gallery-image" class="img-responsive" /></a>
+                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all neuroscience">
+                    <a href="images/cn8.png"><img src="images/cn8.png" alt="gallery-image" class="img-responsive" /></a>
                 </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all sph">
-                    <a href="images/sph1.png"><img src="images/sph1.png" alt="gallery-image" class="img-responsive" /></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all sph">
-                    <a href="images/sph2.png"><img src="images/sph2.png" alt="gallery-image" class="img-responsive" /></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all sph">
-                    <a href="images/sph3.png"><img src="images/sph3.png" alt="gallery-image" class="img-responsive" /></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all sph">
-                    <a href="images/sph4.png"><img src="images/sph4.png" alt="gallery-image" class="img-responsive" /></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all sph">
-                    <a href="images/sph5.png"><img src="images/sph5.png" alt="gallery-image" class="img-responsive" /></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all sph">
-                    <a href="images/sph6.png"><img src="images/sph6.png" alt="gallery-image" class="img-responsive" /></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all sph">
-                    <a href="images/sph7.png"><img src="images/sph7.png" alt="gallery-image" class="img-responsive" /></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all sph">
-                    <a href="images/sph8.png"><img src="images/sph8.png" alt="gallery-image" class="img-responsive" /></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all sph">
-                    <a href="images/sph9.png"><img src="images/sph9.png" alt="gallery-image" class="img-responsive" /></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all sph">
-                    <a href="images/sph10.png"><img src="images/sph10.png" alt="gallery-image" class="img-responsive" /></a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 gallery-item all sph">
-                    <a href="images/sph11.png"><img src="images/sph11.png" alt="gallery-image" class="img-responsive" /></a>
-                </div>
+
 
                
             </div>
@@ -455,6 +453,26 @@
 
                         </div>
 
+                        <!-- Testimonial 3 -->
+                        <div class="item">
+
+                            <div class="col-md-2 col-md-offset-1">
+
+                                <div class="quote-icon">
+                                    <icon class="fui-twitter i6x"></icon>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                <p class="lead">If you're into simulation / visualisation of bioscience data have a look at @GeppettoEngine, nerdgasm guaranteed. Proud to be on the team.</p>
+                                <cite>Giovanni Idili, <a href="https://twitter.com/John_Idol/status/701531317926830085" target>Geppetto architect</a></cite>
+                            </div>
+
+                        </div>
+
+
+
+
                     </div>
                     
                     <!-- Carousel navigation arrows -->
@@ -485,28 +503,29 @@
                         <p>Geppetto is entirely open source and is being built by a growing community of talented engineers and scientists. 
                             Geppetto uses different languages to achieve different goals.  
                             Its core and back-end are built in Java to provide a solid and performant infrastructure.
-                            The front-end is built using the latest HTML5 and Javascript awesome. A module to support 
-                            scientists to write Python code to script it is also being built.
+                            The front-end is built using the latest HTML5 and Javascript awesome.
                         	Geppetto is being developed using the Eclipse platform and uses technologies like 
                         	<a href="http://www.osgi.org/" target="_blank">OSGi</a>, 
                         	<a href="http://www.springsource.org/spring-framework" target="_blank">Spring Framework</a>, 
-                        	<a href="http://www.khronos.org/opencl/" target="_blank">OpenCL</a> and 
-                        	<a href="http://maven.apache.org/" target="_blank">Maven</a>.
+                        	and <a href="http://maven.apache.org/" target="_blank">Maven</a>.
+                            Geppetto's model abstraction is defined using ecore and all the model code is generated using
+                            <a href="https://eclipse.org/modeling/emf/" target="_blank">EMF</a>.
 							Geppetto's front-end is written using 
-							<a href="http://mrdoob.github.com/three.js/" target="_blank">THREE.js</a> and 
-							<a href="http://www.khronos.org/webgl/" target="_blank">WebGL</a>.
+							<a href="http://mrdoob.github.com/three.js/" target="_blank">THREE.js</a>,
+                            <a href="https://facebook.github.io/react/" target="_blank">React</a> and
+							<a href="http://backbonejs.org/" target="_blank">Backbone</a>.
 							The back-end and the front-end communicate by exchanging 
 							<a href="http://www.json.org/" target="_blank">JSON</a> messages through 
 							<a href="http://www.websocket.org/" target="_blank">WebSocket</a>.
 							Geppetto runs on the Eclipse Virgo WebServer and can be deployed on different infrastructures including 
 							cloud-based ones like Amazon <a href="http://aws.amazon.com/ec2/" target="_blank">EC2</a>. 
 							<strong>Anything sound familiar?</strong></p> 
-                        <p>Geppetto is multi-platform and works on Linux, Mac OsX and Windows, so no matter on what platform you develop 
+                        <p>Geppetto is multi-platform and works on Linux, Mac OSX and Windows, so no matter on what platform you develop
                         there is a way for you to run it and add 
-                        	<span class="popover-trigger" data-toggle="popover" data-placement="top" title="What qualifies?" data-content="New simulator modules, new mathematical solvers, new GUI widgets, bug fixes, you name it!">fantastic contributions</span>.</p> 
+                        	<span class="popover-trigger" data-toggle="popover" data-placement="top" title="What qualifies?" data-content="New widgets, new formats support, enhancements and bug fixes, you name it!">fantastic contributions</span>.</p>
                         	
 						<p class="lead">Show me the code!</p>
-                        <p>Right!  Geppetto is hosted on GitHub as you would expect. Every module has its own repository 
+                        <p>Right!  Geppetto is hosted on GitHub, every module has its own repository
                         to provide flexible ways of branching individual components. 
                         	For every module we have <span class="tooltip-trigger" data-toggle="tooltip" title="Features are usually developed in their own branch to not get in the way until they are ready!">at least</span> 
                         	two branches, development and master. The development branch gets merged into master each 
@@ -550,7 +569,33 @@
 
                     <!--////////// Accordion Toggle //////////-->
                     <div class="panel-group" id="accordion">
-                     
+
+                        <!-- PANEL 2 -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                        Who is building Geppetto?
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseTwo" class="panel-collapse">
+                                <div class="panel-body">
+                                    <p><a href="https://github.com/orgs/openworm/teams/geppetto-contributors" target="_blank">Many</a> engineers and scientists contribute every day to the development of Geppetto, a big thank to our superheroes:
+                                    <ul>
+                                        <li><a href="https://uk.linkedin.com/in/matteocantarelli" target="_blank">Matteo Cantarelli</a> <small>(Coordinator, principal architect, engineer)</small></li>
+                                        <li><a href="https://uk.linkedin.com/in/giovanniidili">Giovanni Idili</a> <small>(Architect, engineer)</small></li>
+                                        <li><a href="https://uk.linkedin.com/in/adrianquintanaperez/en" target="_blank">Adrian Quintana Perez</a> <small>(Architect, engineer)</small></li>
+                                        <li><a href="mailto:borismarin@gmail.com">Boris Marin</a> <small>(Architect, computational scientist)</small></li>
+                                        <li><a href="https://www.linkedin.com/in/jesus-martinez-95971219Jesus Martinez">Jesus Martinez</a> <small>(Engineer)</small></li>
+
+                                    </ul></p>
+                                    <p>For the full list of contributors see <a href="https://github.com/orgs/openworm/teams/geppetto-contributors" target="_blank">here</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- PANEL 1 -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -583,17 +628,18 @@
                                 </div>
                             </div>
                         </div>
-                    
-                        <!-- PANEL 2 -->
+
+
+                        <!-- PANEL 3 -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                                     How is Geppetto development funded? 
                                     </a>
                                 </h4>
                             </div>
-                            <div id="collapseTwo" class="panel-collapse collapse">
+                            <div id="collapseThree" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <p>Building great software takes time. And money. Geppetto is no exception and as 
                                     many open-source projects it is funded by a hybrid model. Geppetto's development 
@@ -602,6 +648,7 @@
 		                                    <li><a href="http://openworm.org" target="_blank">OpenWorm</a></li>
 		                                    <li><a href="http://metacell.us" target="_blank">MetaCell</a></li>
 		                                    <li><a href="http://www.wellcome.ac.uk/" target="_blank">Wellcome Trust</a> via the <a href="http://www.opensourcebrain.org/" target="_blank">Open Source Brain</a> initiative</li>
+                                            <li><a href="http://www.wellcome.ac.uk/" target="_blank">Wellcome Trust</a> via <a href="http://www.virtualflybrain.org/" target="_blank">Virtual Fly Brain</a></li>
 											<li><a href="http://www.orionbionetworks.org/" target="_blank">Orion Bionetworks</a></li>
 	                                    </ul>
                                     </p>
@@ -616,13 +663,13 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
                                     What is Geppetto's relationship with OpenWorm?
                                     </a>
                                 </h4>
                             </div>
                             
-                            <div id="collapseThree" class="panel-collapse collapse">
+                            <div id="collapseFour" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <p>The decision to build Geppetto came after an analysis of the requirements for a 
                                     platform able to support the <a href="http://openworm.org" target="_blank">OpenWorm</a> 
@@ -638,13 +685,13 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
                                     What license does Gepetto have?
                                     </a>
                                 </h4>
                             </div>
                             
-                            <div id="collapseFour" class="panel-collapse collapse">
+                            <div id="collapseFive" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <p>Geppetto is released under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.</p>
                                 </div>
@@ -659,10 +706,9 @@
                 <div class="col-md-6">
 
                     <div class="row contact-intro">
-                        <div class="col-md-2 text-right">
-                        	<!-- <img src="images/icons/support.svg" alt="" /> -->
-                        </div>
-                        <div class="col-md-9"><p class="lead">Didn't find what you were looking for? Check out our <a href="http://docs.geppetto.org/en/latest/" target="_blank">wiki</a> or shoot us a line!</p></div>                        
+                         <div class="col-md-12"><p class="lead text-center">
+                             <span class="tooltip-trigger" data-toggle="tooltip" data-placement="top" title="Geppetto's cyberpirate created by talented artist and neuroscientist Matteo Farinella creator of Neurocomic <3"><img src="images/geppetto.png" alt="" /></span>
+                             Arr, didn't find what you were looking for? Check out our <a href="http://docs.geppetto.org/en/latest/" target="_blank">docs</a> or shoot us a line!</p></div>
                     </div>
 
                     <!--////////// CONTACT FORM //////////-->
@@ -712,7 +758,7 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                        <p>Copyright &copy; 2013 Geppetto.</p>
+                        <p>Copyright &copy; 2013-2016 Geppetto contributors.</p>
                     </div>
 
                     <!--<div class="col-md-6 social">
@@ -746,6 +792,7 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/jquery.fitvids.min.js"></script>
+    <script type="text/javascript" src="js/jquery.parss.uncompressed.js"></script>
     <script src="js/jquery.tweet.js"></script>
     <script src="js/bootstrap-select.js"></script>
     <script src="js/bootstrap-switch.js"></script>
@@ -753,6 +800,7 @@
     <script src="js/flatui-radio.js"></script>
     <script src="js/jquery.tagsinput.js"></script>
     <script src="js/jquery.placeholder.js"></script>
+    <script src="js/jquery.auto-text-rotating.js"></script>
     <script src="js/custom.js"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
