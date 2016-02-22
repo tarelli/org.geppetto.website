@@ -228,7 +228,7 @@ $(window).load(function(){
         });
     });
 
-	$('.tagline').html("Simulate the future | The scientific visualization platform |  Advancing computational biology | The ultimate neuroscience platform | Brain simulations. In your browser. ");
+	$('.tagline').html("Simulate the future. | The scientific visualization platform. |  Advancing computational biology. | The ultimate neuroscience platform. | Brain simulation. In your browser. ");
 	$('.tagline').atrotating({animation: 'animateCss',animateCssAnimation:['bounceIn', 'bounceOut']});
 
 	$("#news-feed").PaRSS("http://geppettoengine.tumblr.com/rss", // url to the feed
