@@ -234,7 +234,7 @@ $(window).load(function(){
 	$("#news-feed").PaRSS("http://geppettoengine.tumblr.com/rss", // url to the feed
 		4, // number of items to retrieve
 		"M jS Y, g:i a", // date format
-		true, // include descriptions
+		false, // include descriptions
 		function()
 		{/*
 		 * optional callback function performed after list is appended to the
