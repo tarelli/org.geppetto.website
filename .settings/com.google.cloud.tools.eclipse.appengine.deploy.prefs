@@ -1,8 +1,8 @@
-account.email=matteo@metacell.us
+account.email=matteo@geppetto.org
 eclipse.preferences.version=1
 include.optional.configuration.files=true
 project.bucket=
-project.id=geppettowebsite
+project.id=geppetto-website
 project.previousVersion.stop=true
 project.promote=true
 project.version=
